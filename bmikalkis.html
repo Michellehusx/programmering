@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+<title>BMI kalkis</title>
+<script>
+window.onload=oppstart;
+
+function oppstart(){
+	document.getElementById("btn").onclick=beregn;
+}
+function beregn(){
+	var navn = document.getElementById("txtnavn").value;
+	var kjonn = document.getElementById("1stkjonn").value;
+	var alder = document.getElementById("txtalder").value;
+
+	var aarTil100 = 100 -alder;
+
+	var historie=" Det var en gang en " +kjonn+" en som het "+navn+ " og var " +alder+" år gammel ";
+	historie= historie +" denne personen hadde " + aarTil100+" år igjen til 100års bursdag ";
+	document.getElementById("historie").innerHTML=historie;
+}
+</script>
+
+</head>
+<body>
+ <p> Navn: <input type="text" id="txtnavn" /><br/>
+
+ 	Kjønn: <select id="1stkjonn"><option value="gutt">Gutt</option>
+ 	<option value="jente">Jente</option></select><br/>
+ 	
+ 	Alder: <input type="number" min="0" max="120" id="txtalder"/><br/>
+ 	<button id="btn" type="button">Generer historie</button></p>
+ 	<p id="historie"></p>
+</body>
+</html>

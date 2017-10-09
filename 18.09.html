@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>hei</title>
+<script>
+window.onload= oppstart;
+function oppstart(){
+	document.getElementById("btnsvar").onclick=svar;
+
+}
+function svar(){
+	var brukersvar=document.getElementById("txtsvar").value);
+    var melding="";
+    var filnavn="";
+/*hvis brukersvar er 1050 da:*/
+     if(brukersvar===1050){ /*tre = blir "om svar er så popper denne opp"*/
+	 melding="du svarte riktig";
+	filnavn="ok.jpg";
+      }
+	document.getElementById("melding").innerHTML="du svarte riktig";
+	/*eller*/
+	else{
+		melding="du svarte feil";
+	    filnavn="fail.jpg";
+	}
+	document.getElementById("melding").innerHTML="du svarte feil";
+	document.getElementById("response").src=filnavn;
+
+}
+</script>
+</head>
+<body>
+<p> Når ble sarpsborg grunnlagt?</p>
+Svar:<input="text" id="txtsvar"/><br/>
+<button type="button" id="btnsvar">svar</button>
+<p id="melding"></p>
+<img src="#" id="response"/>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<charset meta="UTF-8">
+<title>Heeii</title>
+<script>
+window.onload=oppstart;
+ 
+function oppstart () {
+	document.getElementById("btnleggtil").onclick=leggtil;
+
+}
+
+function leggtil(){
+	//document.getElementById("bilder").innerHTML= document.getElementById("bilder").innerHTML+
+	//"<img src=\""+document.getELementById("txtfilnavn").value + "\"/>";
+	//<img src="filnavn"/>
+	 //for å sørge for at "" tegnene osv ikke er i koden kan du bruke\ //
+	//bilder som blir lagt til i en div tag legger seg etter hverandre til det er fult deretter nedover//
+	var nytagg =document.createELement("img");
+	nytagg.src=document.getELementById("txtfilnavn").value;
+	document.getElementById("bilder").appendChild(nytagg);
+	//en annen måte å gjøre det//
+}
+</script>
+<style>
+img{
+	height:75px;
+
+}
+</head>
+<body>
+	<input id="txtfilnavn" type="text"/><button id="btnleggtil" type="button">Leggtil</button>
+<div id="bilder">
+
+</body>
+</html>

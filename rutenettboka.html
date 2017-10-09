@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Rutenett</title>
+<script>
+window.onload=oppstart;
+function oppstart(){
+	var antallkolonner=10;
+	var antallrader=10;
+	var bredde= document.getElementById("tegneflate").width;
+	var hoyde= document.getElementById("tegneflate").height;
+	var kolonnebredde = bredde/antallkolonner;
+	var radhoyde = hoyde/antallrader;
+
+	var ctx= document.getElementById("tegneflate").getContext("2d");
+	ctx.lineWidth=2;
+	ctx.strokeStyle="blue";
+
+	for(var tellerk = 0; tellerk <= antallkolonner; tellerk++){
+		ctx.beginPath();
+		ctx.moveTo(tellerk*kolonnebredde,0);
+		ctx.lineTo (tellerk*kolonnebredde,hoyde);
+		ctx.stroke();
+	}
+	for (var tellerr=0; tellerr <= antallrader; tellerr++){
+		ctx.beginPath();
+		ctx.moveTo(0,tellerr*radhoyde);
+		ctx.lineTo(bredde,tellerr*radhoyde);
+		ctx.stroke();
+	}
+
+}
+</script>
+</head>
+<body>
+	<canvas id="tegneflate" width="400" height="400"></canvas>
+</body>
+</html>

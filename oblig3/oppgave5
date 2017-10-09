@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Oppgave 3</title>
+<script>
+window.onload= oppstart;
+function oppstart(){
+
+}
+</script>
+</head>
+<body>
+	<input type="text">
+<p id="utskrift">h</p>
+</body>
+</html>

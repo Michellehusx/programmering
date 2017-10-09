@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> Variabler </title>
+<meta charset="UTF-8">
+</head>
+<script>
+window.onload=oppstart;
+var lyd1ID;
+var lydspiller1id
+
+function oppstart(){
+	setInterval(spilllyd1,800);
+	setInterval(spilllyd2,200);//200 antall milisekunder lyden gjentas
+}
+function spilllyd1(){
+	var.lyd= new Audio("lydfil.wav");//legge til lydfiler ved oppstart
+	lyd.play();
+
+}
+function spilllyd2(){
+	var.lyd= new Audio("lydfil.wav");//legge til lydfiler ved oppstart
+	lyd1ID=lyd2.play();
+
+function stopplyd1(){
+	lyd1ID.stop();
+}
+
+</script>
+
+</head>
+<body>
+	<button id="btntell" type="button">Klikk her</button>
+	<p id="utskrift"></p>
+</body>
+</html>

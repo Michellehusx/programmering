@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+<title>Oppgave 5</title>
+<script>
+window.onload=oppstart;
+
+ function oppstart(){
+ 	document.getElementById("btnmagi").onclick = magi;
+ }
+function magi(){
+	var verdi1=0;
+	var verdi2=0;
+	var kjonn= document.getElementById("kjonn").value;
+	var alder= document.getElementById("alder").value;
+    var hoyde= document.getElementById("hoyde").value;
+    var navn=document.getElementById("navn").value;
+    //* her henter jeg tallet å spådommen hvis det er en jente*//
+		document.getElementById("utskrift").innerHTML="";
+		if (kjonn="jente"){
+			 verdi1=(alder*hoyde)-3;
+			document.getElementById("utskrift").innerHTML="hallo "+navn+" ditt magiske tall er "+verdi1;
+		}
+		if(verdi1%2 ===0){
+			document.getElementById("utskrift2").innerHTML="Stakkars deg! Alt kommer til å gå deg galt For at spådommen ikke skal gå i oppfyllelse, må du betale inn 100 kr til følgende kontonummer: 1234.12.12345 "
+		}
+		if (kjonn="jente"){
+			 verdi1=(alder*hoyde)-3;
+			document.getElementById("utskrift").innerHTML="hallo "+navn+" ditt magiske tall er "+verdi1;
+		}
+		if(verdi1%2 !==0){
+			document.getElementById("utskrift2").innerHTML="Det vil gå deg alt godt her i verden For at spådommen skal gå i oppfyllelse, må du betale inn 100 kr til følgende kontonummer: 1234.12.12345"
+		}
+	}
+
+</script>
+
+</head>
+<body>
+	Navn: <input type="text" id="navn"/>
+	Kjønn: <select id="kjonn"> <option value "jente">Jente</option>
+	                           <option value "gutt">Gutt</option>
+	       </select>
+	 Alder: <input type="text" id="alder"/>
+	 Høyde: <input type="text" id="hoyde"/>   
+	 <button id="btnmagi">Magi</button>   
+	 <p id="utskrift"></p>
+	 <p id="utskrift2"></p>
+ </body>
+</html>

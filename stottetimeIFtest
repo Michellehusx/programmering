@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Klokke</title>
+<script>
+
+window.onload=oppstart;
+var output ="";
+function oppstart() {
+    var output= document.getElementById("output");
+    var btn= document.getElementById("btninput").onclick= runtest;
+    
+ 
+}
+function runtest(){
+    var value= document.getElementById("input").value;
+      var output= document.getElementById("output");
+    if(1===1){
+      output.innerHTML="Hei";
+    }
+    else{
+        output.innerHTML="neei"
+
+    }
+}
+</script>
+</head>
+<body>
+    <input type="text" id="input"/>
+    <input type="button" id="btninput" value="trykkher"/>
+    <div id="output"></div>
+    
+</body>
+</html>

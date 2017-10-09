@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> Variabler </title>
+<meta charset="UTF-8">
+</head>
+<script>
+window.onload=oppstart;
+
+var antall=0; //en global variable noe som varer for alltid, ikke starter hver gang programmet kjører//
+const antalldageriuke = 7;//eks1 riktig
+const velkomstmelding="Hei";//const kan brukes isteden for var 
+
+function oppstart(){
+	document.getElementById("btntell").onclick=tell;
+
+}
+function tell(){
+	antall++; //antall += 10 øker antallet med 10,20,30,40 osv//eks1
+	document.getElementById("utskrift").innerHTML=antall;
+}
+</script>
+
+</head>
+<body>
+	<button id="btntell" type="button">Klikk her</button>
+	<p id="utskrift"></p>
+</body>
+</html>

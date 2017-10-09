@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hei</title>
+<script>
+window.onload=oppstart;
+var value1=0;
+var value2=0;
+function oppstart(){
+
+document.getElementById("btnpluss").onclick=add;
+document.getElementById("btnminus").onclick=minus;
+document.getElementById("btngange").onclick=multi;
+document.getElementById("btndele").onclick=dele;
+}
+function add (){
+	value1=document.getElementById("value1").value;
+	value2=document.getElementById("value2").value;
+	document.getElementById("svar").innerHTML=parseInt(value1)+parseInt(value2);
+}
+function minus (){
+	value1=document.getElementById("value1").value;
+	value2=document.getElementById("value2").value;
+	document.getElementById("svar").innerHTML=parseInt(value1)-parseInt(value2);
+
+}
+function multi () {
+	value1=document.getElementById("value1").value;
+	value2=document.getElementById("value2").value;
+	document.getElementById("svar").innerHTML=parseInt(value1)*parseInt(value2);
+}
+function dele(){
+	value1=document.getElementById("value1").value;
+	value2=document.getElementById("value2").value;
+	document.getElementById("svar").innerHTML = parseInt(value1) / parseInt(value2);
+}
+</script>
+</head>
+<body>
+	<input type="text" id="value1"/>
+	
+	<input type="text" id="value2"/>
+	<button type="button" id="btnpluss"/>+</button>
+	<button type="button" id="btnminus"/>-</button>
+	<button type="button" id="btngange"/>*</button>
+	<button type="button" id="btndele"/>/</button>
+	<p id="svar">=</p>
+</body>
+</html>

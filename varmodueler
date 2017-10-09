@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> Variabler </title>
+<meta charset="UTF-8">
+</head>
+<script>
+window.onload=oppstart;
+
+function oppstart(){
+	var epler=12;
+	var personer=5;
+
+	var resuktat=epler%personer; // når det kommer % menes det ikke % men REST men dele eplrer på 5 personer så mange ganger det går hvor mange får de da? de får 2 epler hver å sitter igjen 2 epler til overs//
+
+	var res2= 15%5; //0
+	var res3= 16%7;//2
+	//blir brukt til feks rader ,kolloner og canvas
+     
+}
+</script>
+
+</head>
+<body>
+	
+</body>
+</html>

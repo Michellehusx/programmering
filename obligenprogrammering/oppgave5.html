@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Her er et hus</title>
+<script>
+window.onload=oppstart;
+function oppstart(){
+	//her henter jeg tegneflaten fra HTML//
+	 var ctx=document.getElementById("tegneflate").getContext("2d")
+//her er himmelen//
+ctx.beginPath();
+ctx.rect(0,0,1270,600)
+ctx.fillStyle="blue";
+ctx.fill();
+ctx.lineWidth=1;
+ctx.strokeStyle="black";
+ctx.stroke();
+//her er gresset//
+ctx.beginPath();
+ctx.rect(0,600,1270,600)
+ctx.fillStyle="green";
+ctx.fill();
+ctx.lineWidth=1;
+ctx.strokeStyle="black";
+ctx.stroke();
+//her er en måne//
+ctx.beginPath();
+ctx.arc(200,150,60,0,2*Math.PI);
+ctx.fillStyle="yellow";
+ctx.fill();
+ctx.lineWidth=1;
+ctx.strokeStyle="black";
+ctx.stroke();
+
+//her lager jeg selve huset//
+ctx.beginPath();
+ctx.rect(350,350,300,300);
+ctx.fillStyle="red";
+ctx.fill();
+ctx.lineWidth=5;
+ctx.strokeStyle="black";
+ctx.stroke();
+//her er vinduet//
+ctx.beginPath();
+ctx.rect(370,480,70,70);
+ctx.fillStyle="yellow";
+ctx.fill();
+ctx.lineWidth= 3;
+ctx.strokeStyle="black";
+ctx.stroke();
+//her er den vertikale streken i vinduet//
+ctx.beginPath();
+ctx.moveTo(405,480);
+ctx.lineTo(405,550);
+ctx.stroke();
+//her er den horisontale streken i vinduet//
+ctx.beginPath();
+ctx.moveTo(442,510);
+ctx.lineTo(368,510);
+ctx.stroke();
+//her er døra//
+ctx.beginPath();
+ctx.rect(550,500,70,150);
+ctx.fillStyle="brown";
+ctx.fill();
+ctx.lineWidth= 3;
+ctx.strokeStyle="black";
+ctx.stroke();	
+//her er taket//
+ctx.beginPath();
+ctx.moveTo(350,350);
+ctx.lineTo(490,150);
+ctx.lineTo(650,350);
+ctx.fillStyle="brown";
+ctx.fill();
+ctx.lineWidth= 3;
+ctx.strokeStyle="black";
+ctx.stroke();
+
+
+//her er taket til påbygg delen//
+ctx.beginPath();
+ctx.moveTo(650,450);
+ctx.lineTo(870,250);
+ctx.lineTo(1150,450);
+ctx.fillStyle="brown";
+ctx.fill();
+ctx.lineWidth= 3;
+ctx.strokeStyle="black";
+ctx.stroke();
+
+
+//her lagde jeg en påbygg del til huset//
+ctx.beginPath();
+ctx.rect(650,450,500,200);
+ctx.fillStyle="red";
+ctx.fill();
+ctx.lineWidth=1;
+ctx.strokeStyle="black"
+ctx.stroke();
+//her er vindu 1 på påbyggsdelen//
+ctx.beginPath();
+ctx.arc(750,550,40,0,2*Math.PI);
+ctx.fillStyle="yellow";
+ctx.fill();
+ctx.lineWidth=1;
+ctx.strokeStyle="black";
+ctx.stroke();
+//her er vindu 2 på påbyggsdelen//
+ctx.beginPath();
+ctx.arc(1050,550,40,0,2*Math.PI);
+ctx.fillStyle="yellow";
+ctx.fill();
+ctx.lineWidth=1;
+ctx.strokeStyle="black";
+ctx.stroke();
+
+
+
+}
+
+
+   
+	
+
+
+</script>
+</head>
+<body>
+	<canvas id="tegneflate" width="1270" height="700"></canvas>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> Nedteller </title>
+<meta charset="UTF-8">
+</head>
+<script>
+window.onload=oppstart;
+
+function oppstart(){
+	var naa = new Date();
+    var eksamen = new Date("12/05/2017 09:00");
+
+    var differanse= eksamen.getTime()-naa.getTime();
+    var sekunder=differanse/1000;
+    var timer= sekunder/3600;
+
+    document.getElementById("utskrift").innerHTML=sekunder+"sekunder":
+	//5/12-2017 kl09.00 eksamen
+}
+
+
+</script>
+
+</head>
+<body>
+
+	<p id="utskrift"></p>
+</body>
+</html>

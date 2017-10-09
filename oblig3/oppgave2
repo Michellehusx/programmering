@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Oppgave 2</title>
+<script>
+window.onload= oppstart;
+function oppstart(){
+	document.getElementById("btn").onclick = sjekkmnd;
+
+}
+//Her setter jeg en array med alle mnd med antall dager i hver mnd
+function sjekkmnd(){
+	var antall= [];
+	antall[0] = [31]
+	antall[1] = [28]
+	antall[2] = [31];
+	antall[3] = [30];
+	antall[4] = [31];
+	antall[5] = [30];
+	antall[6] = [31];
+	antall[7] = [31];
+	antall[8] = [30];
+	antall[9] = [31];
+	antall[10] = [30];
+	antall[11] = [31];
+	console.log(antall[4])
+	//her lager jeg en array med alle navnene til mnd
+var mnd = ["januar","februar","mars","april","mai","Juni","Juli","August","September","Oktober","November","Desember"]
+	console.log(antall[1]+ " " + mnd[1])
+    //Her skriver jeg alt ut og tar -1 på value mnd for å få det til å gå fra 1-12 isteden for 0-11 som det gjør i en array
+	var brukermnd= parseInt(document.getElementById("mnd").value -1);
+	document.getElementById("utskrift").innerHTML = "Det er " + antall[brukermnd] +" dager i " + mnd[brukermnd];
+ }
+</script>
+</head>
+<body>
+	Skriv inn hvilen mnd du vil sjekke antall dager i 1-12<input id="mnd" type="text">
+	<button id="btn" type="button">Trykk her</button>
+<p id="utskrift"></p>
+</body>
+</html>

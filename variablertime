@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> Variabler </title>
+<meta charset="UTF-8">
+</head>
+<script>
+window.onload=oppstart;
+
+function oppstart(){
+	var tallA=42;
+	var tallB=78;
+     var=0;
+	var sum= tallA+tallB;//leses som skal bli//
+	tallA=TallA+5;//tall a skal få ny verdi som er den gamle pluss 5 legger til 5 til det det var fra før =47//
+	tallA=tallA-tallB+5;
+	tallA=tallA/tallB;
+	tallA=tallA*tallB;
+
+	tallB=tallB+5;//de to linjene her er det samme bare andre metoder//
+	tallB +=5;//forkortelse//
+
+	tallA=tallA+1;
+	tallA+=1;
+    tallA++; //enda en forkortelse , betyr det samme som den første//
+
+    tallA--; //tallA skal bli det tallA var med - 1//
+    tallB *=3;// tallB skal bli det tallB var med gange 3//
+    tallB/=3; //tallB skal bli det tallB var med delt på 3//
+}
+</script>
+
+</head>
+<body>
+	
+</body>
+</html>

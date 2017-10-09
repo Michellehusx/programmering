@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Walla</title>
+<script>
+window.onload=oppstart;
+
+function oppstart(){
+
+  var tall= Math.random();
+  if(Math.random()  > 0.6){
+  	document.getElementById("melding").style.color="red";
+  }
+  else if(Math.random() > 0.33){
+  	document.getElementById("melding").style.color="blue";
+  }
+else{
+  	document.getElementById("melding").style.color="green";
+  }
+}
+</script>
+</head>
+<body>
+	<h1 id="melding">God morgen</h1>
+</body>
+</html>

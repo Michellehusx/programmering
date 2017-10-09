@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset "utf-8">
+<title>Handle liste </title>
+<script>
+	window.onload=oppstart;
+
+	var sum = 0;
+
+	function oppstart (){
+		document.getElementById("btnleggtil").onclick=leggtil
+	}
+	function leggtil(){
+		var antall = parseInt(document.getElementById("txtantall").value);
+		var vare = document.getElementById("txtvarer").value;
+		var totalt = document.getElementById("totalt").value;
+
+
+		sum += antall; 
+        
+		document.getElementById("liste").innerHTML += "<li>" + antall + " " + vare + "</li>";
+        document.getElementById("totalt").innerHTML="totalt " + sum;
+	}
+</script>
+<body>
+	<h1>Handle liste</h1>
+Antall: <input type="text" id="txtantall"/></br>
+Varer:  <input type "text" id="txtvarer"/></br>
+<button id="btnleggtil" type="button"> Legg til</button>
+
+
+
+<!-- Liste her -->
+<ul id="liste">
+
+</ul>
+<p id="totalt">Totalt </p>
+
+
+</body>
+</html>

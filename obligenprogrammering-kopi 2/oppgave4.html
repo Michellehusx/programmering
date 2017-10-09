@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<head>
+	<script>
+	window.onload=oppstart;
+
+    function oppstart(){
+    	
+    	document.getElementById("null").onclick=leggtil0;
+    	document.getElementById("en").onclick=leggtil1;
+    	document.getElementById("to").onclick=leggtil2;
+    	document.getElementById("tre").onclick=leggtil3;
+    	document.getElementById("fire").onclick=leggtil4;
+    	document.getElementById("fem").onclick=leggtil5;
+    	document.getElementById("seks").onclick=leggtil6;
+    	document.getElementById("syv").onclick=leggtil7;
+    	document.getElementById("otte").onclick=leggtil8;
+    	document.getElementById("ni").onclick=leggtil9;
+    }
+
+    function leggtil0 (){
+    	
+    	document.getElementById("txt").value+=0;
+    }
+    
+    function leggtil1 (){
+    	
+    	document.getElementById("txt").value+=1;
+    }
+    
+    function leggtil2 (){
+    	
+    	document.getElementById("txt").value+=2;
+    
+    }
+    function leggtil3 (){
+    	
+    	document.getElementById("txt").value+=3;
+
+    }
+    
+    function leggtil4 (){
+    	
+    	document.getElementById("txt").value+=4;
+    }
+    
+    function leggtil5 (){
+    	
+    	document.getElementById("txt").value+=5;
+    }
+    
+    function leggtil6 (){
+    	
+    	document.getElementById("txt").value+=6;
+    }
+    
+    function leggtil7 (){
+    	
+    	document.getElementById("txt").value+=7;
+    }
+    
+    function leggtil8 (){
+    	
+    	document.getElementById("txt").value+=8;
+    }
+    
+    function leggtil9 (){
+    	
+    	document.getElementById("txt").value+=9;
+    }
+	</script>
+</head>
+<body>
+
+ <input type="text" id="txt"/></br>
+<button type="button" id="null"/>0</button>
+<button type="button" id="en"/>1</button>
+<button type="button" id="to"/>2</button>
+<button type="button" id="tre"/>3</button>
+<button type="button" id="fire"/>4</button></br>
+<button type="button" id="fem"/>5</button>
+<button type="button" id="seks"/>6</button>
+<button type="button" id="syv"/>7</button>
+<button type="button" id="otte"/>8</button>
+<button type="button" id="ni"/>9</button>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="oppgave4ob2stylesheet.css">
+    <meta charset="UTF-8"/>
+    <title>Klokke</title>
+<script>
+
+window.onload=oppstart;
+function oppstart() {
+    var dato = new Date();
+    var timer = dato.getHours();
+    var minutter = dato.getMinutes();
+    var sekunder = dato.getSeconds();
+ 
+  var time = timer + ":" + minutter +":" + sekunder;
+  setInterval(oppstart,500);
+  document.getElementById("klokke").innerHTML=time;
+
+  if (timer > 05 && timer < 12){
+    document.getElementById("morgen").innerHTML="Good morning sunshine";
+  }
+ else if( timer >12 && timer < 18){
+    document.getElementById("morgen").innerHTML="Good afternoon";
+    document.getElementById("bilde2").value;
+ }
+
+ else if(timer > 18 && timer < 22){
+    document.getElementById("morgen").innerHTML="Good evening";
+ }
+ else 
+    document.getElementById("morgen").innerHTML="Good night:)";
+}
+
+</script>
+</head>
+<body>
+    <div id="klokke"></div>
+    <p id="morgen"></p>
+    <img id="bilde1" href="morgen.jpg"></img>
+     <img id="bilde2" src="ettermiddag.jpg" alt"bilde2"></img>
+      <img id="bilde3" href="kveld.jpg"></img>
+       <img id="bilde4" href="natt.jpg"></img>
+
+</body>
+</html>

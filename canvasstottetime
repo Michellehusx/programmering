@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<charset meta="UTF-8">
+<title>HusCanvas</title>
+<script>
+window.onload=oppstart;
+ 
+
+function oppstart () {
+ var canvas=document.getElementById("mycanvas");
+ var ctx=canvas.getContext("2d");
+ var x= 200;
+ var y=200;
+ var x1=600;
+ var y1=200;
+ var x2=400;
+ var y2=50;
+
+ctx.beginPath();
+ctx.moveTo(x,y);
+ctx.lineTo(x1,y1);
+ctx.lineTo(x2,y2);
+ctx.fill();
+ 
+ctx.beginPath();
+ctx.rect(200,200,400,200);
+ctx.lineWidth="6";
+ctx.strokeStyle="black";
+ctx.stroke();
+}
+
+
+</script>
+
+</head>
+<body>
+	<canvas id="mycanvas" width="800" height="400" style="border:1px solid black;"></canvas>
+</body>
+</html>

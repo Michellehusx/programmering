@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Oppgave 3</title>
+<script>
+window.onload= oppstart;
+function oppstart(){
+ var elever=["Kari","Per","Ole","Sofie","Truls","Kevin","Michelle"];
+ 
+ var nynavneliste= [];
+
+ for(var i=0; i < 3; i++){
+ 	var tilfeldig= Math.floor(elever.length * Math.random());
+ 	nynavneliste.push(elever[tilfeldig]);
+ 	elever.splice(tilfeldig,1);
+ 	console.log(elever);
+ 	 //Her er planen min for hvordan ikke samme navn skal bli trukket flere ganger//
+ 	 //1.Ta en bolle med lapper med forskjellige navn.
+     //2.Trekk 3 forskjellige navn ut av bollen.
+     //3.Ikke legg navnelappene som allerede er trukket ut tilbake i bollen.
+     //4.Trekk på nytt.
+
+ 	
+ }
+ document.getElementById("utskrift").innerHTML= nynavneliste.toString();
+ }
+</script>
+</head>
+<body>
+<p id="utskrift">h</p>
+</body>
+</html>

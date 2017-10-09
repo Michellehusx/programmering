@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="utf-8"/>
+   <title>testside</title>
+   <script>
+  
+    window.onload= oppstart;
+
+    function oppstart () {
+
+        document.getElementById("btnvismelding").onclick = vismelding;
+    	//hallo dette er en kommentar
+    
+    	
+
+
+    }
+    function vismelding() {
+    	document.getElementById("para").innerHTML="Hei " + 
+    	  document.getElementById("txtnavn").value + "!";
+    	document.getElementById("para").style.backgroundColor="pink"
+    	document.getElementById("para").style.display="block"
+    }
+  </script>
+ </head>
+   <body>
+   Navn:	<input id="txtnavn" type="text" /></br>
+   	<button id="btnvismelding" type="button">klikk her</button></br>
+   	<h1>Hallo</h1>
+   	<p id="para">test</p>
+
+ </body>
+ </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<script>
+window.onload= oppstart;
+function oppstart() {
+document.getElementById("btnberegn").onclick=beregn;
+}
+
+function beregn() {
+	var timer= document.getElementById("txttimer").value.replace(",",".");
+	var timelonn= document.getElementById("txtlonn").value.replace(",",".");
+
+	var total= timer * timelonn;
+
+	document.getElementById("utskrift").innerHTML= total+"kr";
+	
+
+}
+
+</script>
+</head>
+<body>
+ <p> Ant.timer:<input id="txttimer" type="text"/><br/>
+ 	Timelønn: <input id="txtlonn" type="text" /><br/>
+ 	<button id="btnberegn" type="button">Beregn</button><br/>
+ </p>
+ <output id="utskrift">Test</output>
+
+</body>
+</html>

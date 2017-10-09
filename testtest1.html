@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<script>
+window.onload= oppstart;
+
+var tall= 0;
+function oppstart() {
+   setInterval(tegn,100);
+
+} 
+function tegn() {
+	var ctx= document.getElementById("lerret").getContext("2d");
+	ctx.beginPath();
+	ctx.fillStyle="white";
+	ctx.globalAlpha=0,1;
+	ctx.rect(0,0,400,400);
+	ctx.fill();
+
+	ctx.beginPath();
+	ctx.moveTo(0,tall);
+	ctx.globalAlpha=1.0;
+	ctx.lineTo(400-tall,0);
+	ctx.stroke();
+    tall= tall+10;
+
+    ctx.beginPath();
+	ctx.moveTo(400,tall);
+	ctx.globalAlpha=1.0;
+	ctx.lineTo(400-tall,400);
+	ctx.stroke();
+    tall= tall+10;
+}
+
+</script>
+<style>
+#lerret {
+	border-style:solid;
+}
+</style>
+</head>
+<body>
+	<canvas id="lerret" width="400" height="400"></canvas>
+
+
+
+</body>
+</html>

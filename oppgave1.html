@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Velkommen</title>
+<script>
+window.onload=oppstart;
+function oppstart (){
+document.getElementById("btnklikkher").onclick = klikkher;
+document.getElementById("btnklikkher2").onclick = klikkher2;
+}
+function klikkher(){
+	document.getElementById("para").innerHTML="Hei på deg"
+}
+function klikkher2(){
+	document.getElementById("para").innerHTML="Hade bra"
+}
+</script>
+</head>
+<body>
+	<button id="btnklikkher" type="button">Klikk her</button>
+	<button id="btnklikkher2" type="button"> klikk her2 </button>
+	<p id="para">Klikk her</p>
+</body>
+</html>	
+

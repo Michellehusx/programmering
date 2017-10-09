@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+<title>Oppgave 5</title>
+<script>
+window.onload=oppstart;
+
+ function oppstart(){
+ 	document.getElementById("btnmagi").onclick = magi;
+
+ }
+function magi(){
+	var verdi1=0;
+	var verdi2=0;
+	var kjonn= document.getElementById("kjonn").value;
+	var alder= parseInt(document.getElementById("alder").value);/*Her får alder og hoyde en parsint da det er tall*/
+    var hoyde= parseInt(document.getElementById("hoyde").value);
+    var navn=document.getElementById("navn").value;
+    //* her setter jeg verdien til den magiske verdien for både jente og gutt*//
+		 verdi1=(alder*hoyde)-3;
+		 verdi2=(navn.length*alder)-hoyde;
+		if (kjonn==="jente" && verdi1%2 ===0){/*Hvis det er en jente og verdi1=partall da*/
+			 
+			document.getElementById("utskrift2").innerHTML="hallo "+navn+" ditt magiske tall er "+verdi1+" Det vil gå deg alt godt her i verden For at spådommen skal gå i oppfyllelse, må du betale inn 100 kr til følgende kontonummer: 1234.12.12345";
+			   
+		}   /*Hvis det er en gutt og verdi2=partall da*/
+		else if(kjonn==="gutt" && verdi2%2 ===0){
+			 	document.getElementById("utskrift2").innerHTML="hallo "+navn+" ditt magiske tall er "+verdi2+" Det vil gå deg alt godt her i verden For at spådommen skal gå i oppfyllelse, må du betale inn 100 kr til følgende kontonummer: 1234.12.12345";
+			 	
+			 }
+	          /*hvis det er en jente og verdi1=oddetall da*/
+		else  if(kjonn==="jente" && verdi1%2 !==0){
+			document.getElementById("utskrift2").innerHTML="hallo "+navn+" ditt magiske tall er "+verdi1+" Stakkars deg! Alt kommer til å gå deg galt For at spådommen ikke skal gå i oppfyllelse, må du betale inn 100 kr til følgende kontonummer: 1234.12.12345 ";
+		}
+			/*Hvis ingen av over stemmer da (gutt oddetall*/
+		else{	
+			document.getElementById("utskrift2").innerHTML="hallo "+navn+" ditt magiske tall er "+verdi2+" Stakkars deg! Alt kommer til å gå deg galt For at spådommen ikke skal gå i oppfyllelse, må du betale inn 100 kr til følgende kontonummer: 1234.12.12345 ";
+		
+		}
+			 
+	}
+
+</script>
+
+</head>
+<body>
+	<div>
+	Navn: <input type="text" id="navn"/><br/>
+	Kjønn: <select id="kjonn"> <option value="jente">Jente</option>
+	                           <option value="gutt">Gutt</option>
+	       </select></br>
+	 Alder: <input type="text" id="alder"/></br>
+	 Høyde: <input type="text" id="hoyde"/> </br>  
+	 <button id="btnmagi">Magi</button>   
+	 <p id="utskrift"></p>
+	 <p id="utskrift2"></p>
+	 <div>
+ </body>
+</html>

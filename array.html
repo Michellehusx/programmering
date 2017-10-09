@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Array</title>
+<script>
+window.onload=oppstart;
+
+var poeng=[45, 57 ,56 ,24];
+var navn=["Nils","pils","krils","svils"];
+
+function oppstart(){
+   var sum=0;
+   var maks=poeng[0];
+   var maksnavn=navn[0];
+
+	for(var i = 0; i <5; i++){
+	document.getElementById("utskrift").innerHTML += navn[i] + "fikk" + poeng[i];
+
+	sum+=poeng[i]; //finne gjennomsnitts poeng
+
+	if(poeng[i] < maks){ //finne den men høyest poeng
+		maks=poeng[i];
+		maksnavn=navn[i];
+	}
+	}
+	document.getElementById("utskrift3").innerHTML = maksnavn +"fikk"+ maks;
+	document.getElementById("utskrift2").innerHTML=sum/poeng.lenght;
+}
+</script>
+</head>
+<body>
+	<p id="utskrift3"></p>
+	<p id="utskrift2"></p>
+	<p id="utskrift"></p>
+</body>
+</html>

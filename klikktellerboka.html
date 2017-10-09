@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+<title>Klikktellerboka</title>
+<script>
+window.onload=oppstart;
+var antall=0;
+
+function oppstart(){
+	document.getElementById("btnklikk").onclick=klikket;
+
+}
+function klikket(){
+	antall=antall+1;
+	document.getElementById("antklikk").innerHTML=antall;
+
+}
+
+
+</script>
+
+</head>
+<body>
+	<button id="btnklikk">Klikk meg:)</button>
+	<p>Knappen er trykket <span id="antklikk">0</span> ganger</p>
+</body>
+</html>

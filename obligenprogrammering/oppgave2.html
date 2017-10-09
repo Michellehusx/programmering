@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta=charset"UTF-8"/>
+<title>Velkommen</title>
+	<script>
+	window.onload=oppstart;
+	function oppstart(){
+    document.getElementById("btnepler").onclick=rett;
+    document.getElementById("btneplef").onclick=galt;
+    document.getElementById("btngodterir").onclick=rett;
+    document.getElementById("btngodterif").onclick=galt;
+    document.getElementById("btnfiskr").onclick=rett;
+    document.getElementById("btnfiskf").onclick=galt;
+
+    }
+
+
+    function rett(){
+		alert("Riktig");
+
+	}
+	function galt(){
+		alert("Galt");
+	}
+
+
+
+	function riktigepl(){
+		alert("Riktig");
+
+	}
+	function feilepl(){
+		alert("Galt");
+	}
+	function riktiggodt(){
+		alert("Galt");
+	}
+	function feilgodt(){
+		alert("Riktig");
+	}
+	function riktigfisk (){
+		alert("Riktig");
+	}
+	function feilfisk(){
+		alert("Galt");
+	}
+</script>
+</head>
+	<body>
+		<p id="para1">Eple er sunt <button id="btnepler" type="button">Sann</button>
+           <button id="btneplef" type="button">Usann</button>
+		</p>
+		<p id="para2">Godteri er sunt<button id="btngodterir" type="button">Sann</button>
+			<button id="btngodterif" type="button">Usann</button>
+		</p>
+		<p id="para3">Fisk er sunt<button id="btnfiskr" type="button">Sann</button>
+			<button id="btnfiskf" type="button">Usann</button>
+		</p>
+		
+	</body>
+	</html>	

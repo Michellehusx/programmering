@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Walla</title>
+<script>
+window.onload=oppstart;
+var ctx;
+var x= 400;
+function oppstart(){
+var ctx=document.getElementById("tegneflate").getElementById("2d");
+setInterval(tegn,100);
+
+}
+function tegn(){
+	ctx.rect(x,400,10,10);
+ctx.fillStyle="black";
+ctx.fill();
+x+=10;
+}
+</script>
+<style>
+#tegneflate {
+	border-style:dotted;
+
+}
+</style>
+</head>
+<body>
+<canvas id="tegneflate" width="800" height="800"></canvas>
+  
+</body>
+</html>

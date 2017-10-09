@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Oppgave 1</title>
+<script>
+window.onload=oppstart;
+ var array=[2,6,33,14,2,87,45,23];
+ var sum=0;
+function oppstart(){
+	document.getElementById("knapp").onclick = regnut; 
+}
+
+function regnut() {
+
+    sum = 0;
+    document.getElementById("utskrift").innerHTML = "";
+
+    if(document.getElementById("antall").value === "1") {
+        for(var i=0; i < array.length;i++){
+            document.getElementById("utskrift").innerHTML += array[i] + ", ";
+        }
+    }
+
+    else if(document.getElementById("antall").value === "2") {
+        array.reverse();
+        for(var i = 0; i < array.length; i++) {
+            document.getElementById("utskrift").innerHTML += array[i] + ", ";
+        }
+    }
+
+    else if(document.getElementById("antall").value ==="3"){
+        for (var i= 0; i < array.length; i++){
+            if( i % 2 ===0){
+
+            document.getElementById("utskrift").innerHTML += array[i] + ",";
+        }
+        
+        }
+            
+    }
+
+    else if (document.getElementById("antall").value ==="4"){
+        for(var i = 0; i <array.length; i++){
+            if ( array[i] < 10 ){
+                document.getElementById("utskrift").innerHTML += array[i] + ",";
+            }
+
+
+        }
+
+    }
+    
+    else if (document.getElementById("antall").value ==="5"){
+          for ( var i = 0; i < array.length; i++){
+
+            if (array[i] % 2 === 0){
+
+                document.getElementById("utskrift").innerHTML += array[i] + ",";
+            }
+          }
+
+
+    }
+
+	
+    else if(document.getElementById("antall").value === "6"){
+         for (var i = 0; i < array.length; i++){
+            sum += array[i];
+            document.getElementById("utskrift").innerHTML=sum;
+
+         }
+
+    }
+
+    else if(document.getElementById("antall").value ==="7"){
+             for (var i = 0; i < array.length; i++){
+                sum+= array[i];
+             }
+              sum/array;
+            document.getElementById("utskrift").innerHTML = array.length;
+
+          }
+
+
+          else if(document.getElementById("antall").value==="8"){
+                for(var i = 0; i < array.length; i++){
+                    sum+= array[i];
+                }
+
+                 sum = sum / array.length;
+              document.getElementById("utskrift").innerHTML =sum;
+
+          }
+
+          else if (document.getElementById("antall").value==="9"){
+             for (var i = 0; i < array.length; i++){
+                    
+                if (array[i] % 2 === 0){
+                    sum+=array[i];
+
+
+                }
+
+             }
+
+            document.getElementById("utskrift").innerHTML=sum;
+          }
+
+          else if(document.getElementById("antall").value==="10"){
+                var minst = 99999999; // et tall som er høyere enn største tallet i arrayen
+                for(var i = 0; i < array.length; i++){
+                    if(array[i] < minst){
+                        minst=array[i]
+                    }
+
+
+                }
+                 document.getElementById("utskrift").innerHTML = minst;
+          }
+
+
+
+          else if(document.getElementById("antall").value==="11"){
+                 var inputt = document.getElementById("input").value;
+                 var finnes = 0;
+                 for(var i = 0;i < array.length; i++){
+                    if(array[i] == inputt){
+                        finnes++;
+                    }                     
+                 }
+                        if(finnes>0){
+                        document.getElementById("utskrift").innerHTML = "Det finnes i arrayen";
+                    } else{
+                        document.getElementById("utskrift").innerHTML = "Det finnes ikke i arrayen";
+
+                    }
+
+                    
+          }
+
+
+          else if(document.getElementById("antall").value==="12"){
+                 var inputt = document.getElementById("input").value;
+                 var finnes = 0;
+                 for(var i = 0;i < array.length; i++){
+                    if(array[i] == inputt){
+                        finnes++;
+                    }                     
+                 }
+                        if(finnes>0){
+                        document.getElementById("utskrift").innerHTML = "Det finnes" + finnes +"i arrayen";
+                    } 
+                    else{
+                        document.getElementById("utskrift").innerHTML = "Det finnes ikke i arrayen";
+
+                    }
+
+
+                    
+          }
+           
+    
+}
+
+</script>
+</head>
+<body>
+	<select id="antall">
+        <option value="1">Hele arrayen</option>
+        <option value="2">Baklengs</option>
+        <option value ="3">Annenhvert tall</option>
+        <option value= "4"> Mindre enn 10</option>
+        <option value="5"> Partall </option>
+        <option value="6"> Summen av alle </option>
+        <option value="7"> Antall elementer </option>
+        <option value="8"> Gjennomsnitt </option>
+         <option value="9"> Summen av partall </option>
+         <option value="10"> Minste verdi </option>
+         <option value="11"> Finn din verdi </option>
+         <option value="12"> Hvor mange ganger </option>
+	</select>
+    <button id="knapp">Skriv ut</button>
+    <input id="input" type="text"/>
+
+<p id="utskrift"></p>
+</body>
+</html>

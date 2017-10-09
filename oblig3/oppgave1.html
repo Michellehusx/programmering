@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Oppgave 1</title>
+<script>
+window.onload=oppstart;
+ var array=[2,6,33,14,2,87,45,23];
+ var sum=0;
+function oppstart(){
+	document.getElementById("btnskrivut").onclick= trykk;
+	document.getElementById("btnbaklengs").onclick=trykk2;
+	document.getElementById("btnannen").onclick=trykk3;
+	document.getElementById("btnti").onclick=trykk4;
+	document.getElementById("btnsummen").onclick=trykk5;
+	document.getElementById("btnantall").onclick=trykk6;
+	document.getElementById("btnsumpar").onclick=trykk7;
+	document.getElementById("btnminst").onclick=slett;
+	document.getElementById("btnverdi").onclick=slett;
+	document.getElementById("btnbestemt").onclick=slett;
+	document.getElementById("btnpar").onclick=slett;
+}
+
+function trykk(){
+	//legger sammen//
+ for (var i= 0; i < array.length; i++){
+ 	sum +=  array[i];
+   
+document.getElementById("utskrift").innerHTML= sum;
+                                     }
+
+
+}
+function trykk2(){
+
+for (var i= 0; i < array.length; i++){
+ 	sum +=  array[i]+"</br>";
+   
+document.getElementById("utskrift").innerHTML= sum;
+}
+
+//baklengs
+function trykk3(){
+
+for (var i=0; i < array.length; i++){
+    array.reverse();
+ document.getElementById("utskrift").innerHTML =sum;
+}
+}
+
+</script>
+</head>
+<body>
+	<button id="btnskrivut">Skriv ut</button><br/>
+	<button id="btnbaklengs">Baklengs</button><br/>
+	<button id="btnannen">Annenhver</button><br/>
+	<button id="btnti">Mindre enn 10</button><br/>
+	<button id="btnbestemt">Bestemt verdi</button><br/>
+	<button id="btnsummen">Summen</button><br/>
+	<button id="btnantall">Antall elementer</button><br/>
+	<button id="btnsumpar">Gjennomsnitt </button><br/>
+	<button id="btnsminst">Partall</button><br/>
+	<button id="btnverdi">Minste element</button><br/>
+	<button id="btnbestemt">Bestemt verdi</button><br/>
+	<button id="btnpar">Partall</button><br/>
+<p id="utskrift">h</p>
+</body>
+</html>
